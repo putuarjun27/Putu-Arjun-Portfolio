@@ -3,33 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Putu Arjun — Industrial Engineering | Production Planning Control &amp; Logistics</title>
+<title>Putu Arjun — Industrial Engineering | Production Planning, Control &amp; Logistics</title>
 <meta name="description" content="Portfolio of Ida I Dewa Putu Arjun Sastraguna, Industrial Engineering graduate from Universitas Gunadarma specializing in Production Planning &amp; Control, process improvement, and data-driven manufacturing systems.">
 <meta name="keywords" content="Industrial Engineering, Production Planning and Control, PPIC, Manufacturing, Process Improvement, Supply Chain, Data Analysis, R, Minitab, Gunadarma University">
 <meta property="og:title" content="Putu Arjun — Industrial Engineering Portfolio">
-<meta property="og:description" content="Production Planning Control &amp; Logistics | Process Improvement | Data-Driven Manufacturing">
+<meta property="og:description" content="Production Planning, Control &amp; Logistics | Process Improvement | Data-Driven Manufacturing">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230E3B2E%22/><circle cx=%2250%22 cy=%2250%22 r=%2216%22 fill=%22%23E2672B%22/></svg>">
-
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230A3D91%22/><circle cx=%2250%22 cy=%2250%22 r=%2216%22 fill=%22%23C8102E%22/></svg>">
+ 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
+ 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
     theme: {
       extend: {
         colors: {
-          cream: '#F6F4EC',
-          creamsoft: '#EFEAD9',
-          ink: '#15211B',
-          green: '#0E3B2E',
-          green2: '#175A45',
-          orange: '#E2672B',
-          orangesoft: '#F3C9AE',
-          line: '#DCD5C1',
-          muted: '#5B6B60'
+          cream: '#F7F9FC',
+          creamsoft: '#E7EEF8',
+          ink: '#0B1B33',
+          green: '#0A3D91',
+          green2: '#1E5FBF',
+          orange: '#C8102E',
+          orangesoft: '#F5C6C6',
+          line: '#D7E0EC',
+          muted: '#55647A'
         },
         fontFamily: {
           display: ['"Space Grotesk"', 'sans-serif'],
@@ -40,10 +40,10 @@
     }
   }
 </script>
-
+ 
 <style>
   :root{
-    --green:#0E3B2E; --green2:#175A45; --orange:#E2672B; --cream:#F6F4EC;
+    --green:#0A3D91; --green2:#1E5FBF; --orange:#C8102E; --cream:#F7F9FC;
   }
   html { scroll-behavior: smooth; }
   @media (prefers-reduced-motion: reduce) {
@@ -51,18 +51,18 @@
     *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
   }
   body { background: var(--cream); }
-
+ 
   /* Flow line signature animation */
   .flow-dash { stroke-dasharray: 6 10; animation: flowmove 2.2s linear infinite; }
   @keyframes flowmove { to { stroke-dashoffset: -64; } }
-
+ 
   .flow-dash-v { stroke-dasharray: 5 9; animation: flowmoveV 2.6s linear infinite; }
   @keyframes flowmoveV { to { stroke-dashoffset: -56; } }
-
+ 
   /* Scroll reveal */
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
-
+ 
   /* Nav underline active */
   .navlink { position: relative; }
   .navlink::after {
@@ -70,44 +70,44 @@
     background: var(--orange); transition: width .25s ease;
   }
   .navlink.active::after, .navlink:hover::after { width: 100%; }
-
+ 
   /* Side rail dots */
-  .rail-dot { width: 7px; height: 7px; border-radius: 999px; background: #C9C1A8; transition: all .25s ease; }
+  .rail-dot { width: 7px; height: 7px; border-radius: 999px; background: #C3CEDD; transition: all .25s ease; }
   .rail-dot.active { background: var(--orange); transform: scale(1.5); }
-
+ 
   /* Card hover lift */
   .lift { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
-  .lift:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -20px rgba(14,59,46,0.35); border-color: var(--orange); }
-
+  .lift:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -20px rgba(10,61,145,0.35); border-color: var(--orange); }
+ 
   /* Modal */
-  .modal-backdrop { background: rgba(21,33,27,0.72); backdrop-filter: blur(3px); }
-
+  .modal-backdrop { background: rgba(11,27,51,0.72); backdrop-filter: blur(3px); }
+ 
   /* timeline rail */
-  .rail-line { background: repeating-linear-gradient(to bottom, #C9C1A8 0 6px, transparent 6px 12px); }
-
+  .rail-line { background: repeating-linear-gradient(to bottom, #C3CEDD 0 6px, transparent 6px 12px); }
+ 
   ::selection { background: var(--orange); color: white; }
-
-  .chip { border: 1px solid var(--line, #DCD5C1); }
-
+ 
+  .chip { border: 1px solid var(--line, #D7E0EC); }
+ 
   /* subtle grain texture on hero */
   .grain::before{
     content:""; position:absolute; inset:0; opacity:.05; pointer-events:none;
     background-image: radial-gradient(#000 0.6px, transparent 0.6px);
     background-size: 4px 4px;
   }
-
+ 
   .mono-eyebrow{ letter-spacing:.14em; }
-
+ 
   .arch { border-radius: 999px 999px 18px 18px; }
-
+ 
   .copybtn:active { transform: scale(0.97); }
-
+ 
   .filter-btn.active { background: var(--green); color: white; border-color: var(--green); }
 </style>
 </head>
-
+ 
 <body class="font-body text-ink antialiased">
-
+ 
 <!-- JSON-LD SEO -->
 <script type="application/ld+json">
 {
@@ -119,7 +119,7 @@
   "alumniOf": "Universitas Gunadarma"
 }
 </script>
-
+ 
 <!-- ============ NAV ============ -->
 <header id="top" class="fixed top-0 left-0 right-0 z-40 bg-cream/90 backdrop-blur border-b border-line">
   <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
@@ -137,14 +137,14 @@
       <a href="#contact" class="navlink" data-nav>Contact</a>
     </nav>
     <a href="#contact" class="hidden lg:inline-flex items-center gap-2 bg-green text-cream font-mono text-xs uppercase tracking-wide px-4 py-2.5 rounded-full hover:bg-orange transition-colors">Let's Connect</a>
-
+ 
     <button id="menuBtn" aria-label="Open menu" aria-expanded="false" class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5">
       <span class="block w-6 h-0.5 bg-ink"></span>
       <span class="block w-6 h-0.5 bg-ink"></span>
       <span class="block w-4 h-0.5 bg-ink self-end"></span>
     </button>
   </div>
-
+ 
   <!-- mobile menu -->
   <div id="mobileMenu" class="lg:hidden hidden border-t border-line bg-cream">
     <nav class="flex flex-col px-5 py-4 gap-4 font-mono text-sm uppercase tracking-wide text-green">
@@ -158,7 +158,7 @@
     </nav>
   </div>
 </header>
-
+ 
 <!-- side rail (desktop only) -->
 <div id="rail" class="hidden xl:flex fixed right-6 top-1/2 -translate-y-1/2 z-30 flex-col gap-3">
   <a href="#hero" data-rail-dot="hero" class="rail-dot" title="Home"></a>
@@ -170,7 +170,7 @@
   <a href="#certifications" data-rail-dot="certifications" class="rail-dot" title="Certifications"></a>
   <a href="#contact" data-rail-dot="contact" class="rail-dot" title="Contact"></a>
 </div>
-
+ 
 <!-- ============ HERO ============ -->
 <section id="hero" class="relative grain pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
   <div class="max-w-7xl mx-auto px-5 md:px-8 grid md:grid-cols-[1.15fr_0.85fr] gap-14 items-center relative">
@@ -180,49 +180,49 @@
         Ida I Dewa Putu<br> Arjun Sastraguna
       </h1>
       <p class="mt-5 text-lg md:text-xl text-ink/80 font-medium max-w-xl">
-        Industrial Engineering Graduate — Production Planning Control &amp; Logistics.
+        Industrial Engineering Graduate — Production Planning, Control &amp; Logistics.
       </p>
       <p class="mt-4 text-[15px] md:text-base text-muted max-w-xl leading-relaxed">
         Bachelor of Industrial Engineering from Universitas Gunadarma, focused on turning manufacturing and
-        production control processes into structured, data informed systems — from shop floor planning to
-        dashboard driven information systems.
+        production-control processes into structured, data-informed systems — from shop-floor planning to
+        dashboard-driven information systems.
       </p>
-
+ 
       <div class="mt-8 flex flex-wrap gap-3">
         <a href="#projects" class="inline-flex items-center gap-2 bg-green text-cream px-5 py-3 rounded-full font-mono text-xs uppercase tracking-wide hover:bg-orange transition-colors">View My Work →</a>
         <a href="#contact" class="inline-flex items-center gap-2 border border-green text-green px-5 py-3 rounded-full font-mono text-xs uppercase tracking-wide hover:bg-green hover:text-cream transition-colors">Let's Connect</a>
       </div>
-
+ 
       <!-- Signature process-flow strip -->
       <div class="mt-14 reveal" data-reveal>
         <p class="font-mono text-[11px] uppercase tracking-widest text-muted mb-3">How I approach a process — click a stage</p>
         <svg viewBox="0 0 620 90" class="w-full max-w-xl" role="img" aria-label="Process flow: Plan, Produce, Control, Analyze">
-          <line x1="40" y1="30" x2="580" y2="30" stroke="#DCD5C1" stroke-width="2"/>
-          <line x1="40" y1="30" x2="580" y2="30" stroke="#E2672B" stroke-width="2" class="flow-dash"/>
+          <line x1="40" y1="30" x2="580" y2="30" stroke="#D7E0EC" stroke-width="2"/>
+          <line x1="40" y1="30" x2="580" y2="30" stroke="#C8102E" stroke-width="2" class="flow-dash"/>
           <!-- nodes -->
           <g class="flow-node" data-target="education">
-            <circle cx="40" cy="30" r="9" fill="#0E3B2E"/>
+            <circle cx="40" cy="30" r="9" fill="#0A3D91"/>
           </g>
           <g class="flow-node" data-target="experience">
-            <circle cx="220" cy="30" r="9" fill="#0E3B2E"/>
+            <circle cx="220" cy="30" r="9" fill="#0A3D91"/>
           </g>
           <g class="flow-node" data-target="projects">
-            <circle cx="400" cy="30" r="9" fill="#0E3B2E"/>
+            <circle cx="400" cy="30" r="9" fill="#0A3D91"/>
           </g>
           <g class="flow-node" data-target="skills">
-            <circle cx="580" cy="30" r="9" fill="#0E3B2E"/>
+            <circle cx="580" cy="30" r="9" fill="#0A3D91"/>
           </g>
-          <text x="40" y="64" text-anchor="middle" class="font-mono" font-size="12" fill="#5B6B60">PLAN</text>
-          <text x="220" y="64" text-anchor="middle" class="font-mono" font-size="12" fill="#5B6B60">PRODUCE</text>
-          <text x="400" y="64" text-anchor="middle" class="font-mono" font-size="12" fill="#5B6B60">CONTROL</text>
-          <text x="580" y="64" text-anchor="middle" class="font-mono" font-size="12" fill="#5B6B60">ANALYZE</text>
+          <text x="40" y="64" text-anchor="middle" class="font-mono" font-size="12" fill="#55647A">PLAN</text>
+          <text x="220" y="64" text-anchor="middle" class="font-mono" font-size="12" fill="#55647A">PRODUCE</text>
+          <text x="400" y="64" text-anchor="middle" class="font-mono" font-size="12" fill="#55647A">CONTROL</text>
+          <text x="580" y="64" text-anchor="middle" class="font-mono" font-size="12" fill="#55647A">ANALYZE</text>
         </svg>
       </div>
     </div>
-
+ 
     <div class="relative mx-auto md:mx-0">
       <div class="absolute -inset-6 md:-inset-10 rounded-[999px_999px_24px_24px] bg-gradient-to-b from-green2/15 to-orange/10 -z-10"></div>
-      <div class="arch overflow-hidden w-[260px] sm:w-[320px] md:w-[360px] border-4 border-cream shadow-[0_30px_60px_-25px_rgba(14,59,46,0.5)]">
+      <div class="arch overflow-hidden w-[260px] sm:w-[320px] md:w-[360px] border-4 border-cream shadow-[0_30px_60px_-25px_rgba(10,61,145,0.5)]">
         <img src="assets/seated_photo_tight.jpg" alt="Portrait of Ida I Dewa Putu Arjun Sastraguna" class="w-full h-full object-cover" loading="eager">
       </div>
       <div class="absolute -bottom-5 -left-5 sm:-left-8 bg-green text-cream rounded-2xl px-4 py-3 shadow-lg">
