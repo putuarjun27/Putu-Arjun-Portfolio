@@ -226,8 +226,8 @@
         <img src="assets/seated_photo_tight.jpg" alt="Portrait of Ida I Dewa Putu Arjun Sastraguna" class="w-full h-full object-cover" loading="eager">
       </div>
       <div class="absolute -bottom-5 -left-5 sm:-left-8 bg-green text-cream rounded-2xl px-4 py-3 shadow-lg">
-        <p class="font-mono text-[10px] uppercase tracking-wide text-orangesoft">GPA</p>
-        <p class="font-display font-bold text-xl">3.53 / 4.00</p>
+        <p class="font-mono text-[10px] uppercase tracking-wide text-orangesoft">Nickname</p>
+        <p class="font-display font-bold text-xl">Arjun</p>
       </div>
       <div class="absolute -top-5 -right-3 sm:-right-6 bg-cream border border-line rounded-2xl px-4 py-3 shadow-lg">
         <p class="font-mono text-[10px] uppercase tracking-wide text-muted">Class of</p>
@@ -255,7 +255,7 @@
     <div class="reveal" data-reveal>
       <p class="text-lg md:text-xl leading-relaxed text-ink/85">
         I'm a Bachelor of Industrial Engineering graduate from <span class="font-semibold text-green">Universitas Gunadarma</span>
-        (2022–2026, GPA 3.53/4.00), with a working focus on <span class="font-semibold text-green">Production Planning Control
+        (2022–2026), with a working focus on <span class="font-semibold text-green">Production Planning Control
         &amp; Logistics</span>. My interest sits at the intersection of manufacturing operations and the systems that
         keep them running on schedule — production scheduling, inventory and material flow, quality/process control,
         and the data behind those decisions.
@@ -308,8 +308,8 @@
           <p class="text-muted mt-1">Universitas Gunadarma</p>
         </div>
         <div class="shrink-0 bg-green text-cream rounded-xl px-5 py-3 text-center">
-          <p class="font-mono text-[10px] uppercase tracking-wide text-orangesoft">GPA</p>
-          <p class="font-display font-bold text-lg">3.53 / 4.00</p>
+          <p class="font-mono text-[10px] uppercase tracking-wide text-orangesoft"></p>
+          <p class="font-display font-bold text-lg"></p>
         </div>
       </div>
     </div>
@@ -453,6 +453,9 @@ const experience = [
     org: "Unit Kegiatan Mahasiswa (UKM) Hindu Gunadarma",
     tag: "Organization",
     detail: "Led the spiritual and social programming division within Gunadarma's Hindu student community organization, coordinating activities and representing the division within the broader student body."
+    images: [
+      { src: "assets/ukmhg.JPG", caption: "UKMHG (Unit Kegiatan Mahasiswa Hindu Gunadarma)" },
+    ]
   },
   {
     period: "08/2024 — 01/2027",
@@ -460,6 +463,9 @@ const experience = [
     org: "Elementary Laboratory of Industrial Engineering, Universitas Gunadarma",
     tag: "Organization",
     detail: "Supports practicum sessions as a laboratory assistant while handling public-relations responsibilities for the Elementary Laboratory of Industrial Engineering."
+    images: [
+      { src: "assets/elite.HEIC", caption: "ELITE (Elementary Laboratory of Industrial Engineering" },
+    ]
   },
   {
     period: "02/2025 — 03/2025",
@@ -467,6 +473,9 @@ const experience = [
     org: "PT Takagi Sari Multi Utama",
     tag: "Internship",
     detail: "Internship placement within the Production Planning Inventory Control function of an automotive manufacturing company, gaining direct exposure to production scheduling, FIFO system, and stock opname."
+    images: [
+      { src: "assets/takagi_intern.jpeg", caption: "PPIC Takagi" },
+    ]
   },
   {
     period: "03/2025 — 04/2025",
@@ -474,6 +483,9 @@ const experience = [
     org: "PT Astra Daihatsu Motor",
     tag: "Internship",
     detail: "Internship placement within the Production Planning Control function of an automotive manufacturing company, gaining direct exposure to production scheduling and control practices on the shop floor."
+    images: [
+      { src: "assets/adm_intern.jpeg", caption: "ADM Internship" },
+    ]
   },
   {
     period: "03/2026 — 08/2026",
@@ -488,6 +500,10 @@ const experience = [
     org: "PT Sugity Creatives",
     tag: "Internship",
     detail: "Internship in Production Control &amp; Logistics, focused on the coordination between production execution and material/logistics flow within a manufacturing environment."
+    images: [
+      { src: "assets/sugity_intern.jpeg", caption: "Sugity Internship" },
+      { src: "assets/sugity_intern_report.jpeg", caption: "Final Report Internship" }
+    ]
   }
 ];
 
@@ -501,6 +517,11 @@ const projects = [
     role: "Designed and developed the system mockup independently.",
     result: "Streamlined inventory control, faster decision making, and improved warehouse management performance, while reducing manual processing and improving inventory accuracy.",
     skills: ["Inventory Management", "Information System Design", "Dashboard Analytics", "Process Mapping"]
+    images: [
+      { src: "assets/proj_com_dashboard.png", caption: "Dashboard Inventory Management System" },
+      { src: "assets/proj_com_system_dashboard.png", caption: "System Dashboard Inventory Management System" },
+      { src: "assets/proj_com_transaction_report.png", caption: "Transaction Report" }
+    ]
   },
   {
     title: "Customer Order Management Information System",
@@ -511,6 +532,12 @@ const projects = [
     role: "Designed and developed the system mockup independently.",
     result: "Enabled real-time order monitoring, improved data accuracy, and more efficient decision making throughout the production planning process.",
     skills: ["Production Planning", "Order Management", "Process Digitalization", "Dashboard Design"]
+    images: [
+      { src: "assets/proj_com_login.jpg", caption: "Login — SIS-ON (Sugity Integration System Online)" },
+      { src: "assets/proj_com_manual_po.jpg", caption: "Manual Customer Order entry" },
+      { src: "assets/proj_com_upload_po.jpg", caption: "Bulk Upload Customer Order with validation" },
+      { src: "assets/proj_com_elabel.jpg", caption: "Forecast & Planning — E-Label generation" }
+    ]
   }
 ];
 
