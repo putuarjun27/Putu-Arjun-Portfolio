@@ -10,11 +10,11 @@
 <meta property="og:description" content="Production Planning, Control &amp; Logistics | Process Improvement | Data-Driven Manufacturing">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230A3D91%22/><circle cx=%2250%22 cy=%2250%22 r=%2216%22 fill=%22%23C8102E%22/></svg>">
- 
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
- 
+
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
@@ -40,7 +40,7 @@
     }
   }
 </script>
- 
+
 <style>
   :root{
     --green:#0A3D91; --green2:#1E5FBF; --orange:#C8102E; --cream:#F7F9FC;
@@ -51,18 +51,18 @@
     *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
   }
   body { background: var(--cream); }
- 
+
   /* Flow line signature animation */
   .flow-dash { stroke-dasharray: 6 10; animation: flowmove 2.2s linear infinite; }
   @keyframes flowmove { to { stroke-dashoffset: -64; } }
- 
+
   .flow-dash-v { stroke-dasharray: 5 9; animation: flowmoveV 2.6s linear infinite; }
   @keyframes flowmoveV { to { stroke-dashoffset: -56; } }
- 
+
   /* Scroll reveal */
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
- 
+
   /* Nav underline active */
   .navlink { position: relative; }
   .navlink::after {
@@ -70,44 +70,44 @@
     background: var(--orange); transition: width .25s ease;
   }
   .navlink.active::after, .navlink:hover::after { width: 100%; }
- 
+
   /* Side rail dots */
   .rail-dot { width: 7px; height: 7px; border-radius: 999px; background: #C3CEDD; transition: all .25s ease; }
   .rail-dot.active { background: var(--orange); transform: scale(1.5); }
- 
+
   /* Card hover lift */
   .lift { transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
   .lift:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -20px rgba(10,61,145,0.35); border-color: var(--orange); }
- 
+
   /* Modal */
   .modal-backdrop { background: rgba(11,27,51,0.72); backdrop-filter: blur(3px); }
- 
+
   /* timeline rail */
   .rail-line { background: repeating-linear-gradient(to bottom, #C3CEDD 0 6px, transparent 6px 12px); }
- 
+
   ::selection { background: var(--orange); color: white; }
- 
+
   .chip { border: 1px solid var(--line, #D7E0EC); }
- 
+
   /* subtle grain texture on hero */
   .grain::before{
     content:""; position:absolute; inset:0; opacity:.05; pointer-events:none;
     background-image: radial-gradient(#000 0.6px, transparent 0.6px);
     background-size: 4px 4px;
   }
- 
+
   .mono-eyebrow{ letter-spacing:.14em; }
- 
+
   .arch { border-radius: 999px 999px 18px 18px; }
- 
+
   .copybtn:active { transform: scale(0.97); }
- 
+
   .filter-btn.active { background: var(--green); color: white; border-color: var(--green); }
 </style>
 </head>
- 
+
 <body class="font-body text-ink antialiased">
- 
+
 <!-- JSON-LD SEO -->
 <script type="application/ld+json">
 {
@@ -119,7 +119,7 @@
   "alumniOf": "Universitas Gunadarma"
 }
 </script>
- 
+
 <!-- ============ NAV ============ -->
 <header id="top" class="fixed top-0 left-0 right-0 z-40 bg-cream/90 backdrop-blur border-b border-line">
   <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
@@ -137,14 +137,14 @@
       <a href="#contact" class="navlink" data-nav>Contact</a>
     </nav>
     <a href="#contact" class="hidden lg:inline-flex items-center gap-2 bg-green text-cream font-mono text-xs uppercase tracking-wide px-4 py-2.5 rounded-full hover:bg-orange transition-colors">Let's Connect</a>
- 
+
     <button id="menuBtn" aria-label="Open menu" aria-expanded="false" class="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5">
       <span class="block w-6 h-0.5 bg-ink"></span>
       <span class="block w-6 h-0.5 bg-ink"></span>
       <span class="block w-4 h-0.5 bg-ink self-end"></span>
     </button>
   </div>
- 
+
   <!-- mobile menu -->
   <div id="mobileMenu" class="lg:hidden hidden border-t border-line bg-cream">
     <nav class="flex flex-col px-5 py-4 gap-4 font-mono text-sm uppercase tracking-wide text-green">
@@ -158,7 +158,7 @@
     </nav>
   </div>
 </header>
- 
+
 <!-- side rail (desktop only) -->
 <div id="rail" class="hidden xl:flex fixed right-6 top-1/2 -translate-y-1/2 z-30 flex-col gap-3">
   <a href="#hero" data-rail-dot="hero" class="rail-dot" title="Home"></a>
@@ -170,7 +170,7 @@
   <a href="#certifications" data-rail-dot="certifications" class="rail-dot" title="Certifications"></a>
   <a href="#contact" data-rail-dot="contact" class="rail-dot" title="Contact"></a>
 </div>
- 
+
 <!-- ============ HERO ============ -->
 <section id="hero" class="relative grain pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
   <div class="max-w-7xl mx-auto px-5 md:px-8 grid md:grid-cols-[1.15fr_0.85fr] gap-14 items-center relative">
@@ -187,12 +187,12 @@
         production-control processes into structured, data-informed systems — from shop-floor planning to
         dashboard-driven information systems.
       </p>
- 
+
       <div class="mt-8 flex flex-wrap gap-3">
         <a href="#projects" class="inline-flex items-center gap-2 bg-green text-cream px-5 py-3 rounded-full font-mono text-xs uppercase tracking-wide hover:bg-orange transition-colors">View My Work →</a>
         <a href="#contact" class="inline-flex items-center gap-2 border border-green text-green px-5 py-3 rounded-full font-mono text-xs uppercase tracking-wide hover:bg-green hover:text-cream transition-colors">Let's Connect</a>
       </div>
- 
+
       <!-- Signature process-flow strip -->
       <div class="mt-14 reveal" data-reveal>
         <p class="font-mono text-[11px] uppercase tracking-widest text-muted mb-3">How I approach a process — click a stage</p>
@@ -219,7 +219,7 @@
         </svg>
       </div>
     </div>
- 
+
     <div class="relative mx-auto md:mx-0">
       <div class="absolute -inset-6 md:-inset-10 rounded-[999px_999px_24px_24px] bg-gradient-to-b from-green2/15 to-orange/10 -z-10"></div>
       <div class="arch overflow-hidden w-[260px] sm:w-[320px] md:w-[360px] border-4 border-cream shadow-[0_30px_60px_-25px_rgba(10,61,145,0.5)]">
@@ -307,10 +307,6 @@
           <h3 class="font-display font-bold text-xl md:text-2xl text-green">Bachelor of Industrial Engineering</h3>
           <p class="text-muted mt-1">Universitas Gunadarma</p>
         </div>
-        <div class="shrink-0 bg-green text-cream rounded-xl px-5 py-3 text-center">
-          <p class="font-mono text-[10px] uppercase tracking-wide text-orangesoft"></p>
-          <p class="font-display font-bold text-lg"></p>
-        </div>
       </div>
     </div>
   </div>
@@ -321,7 +317,7 @@
   <div class="max-w-7xl mx-auto px-5 md:px-8">
     <p class="font-mono text-xs uppercase tracking-widest text-orange mb-3 reveal" data-reveal>03 / Experience</p>
     <h2 class="font-display font-bold text-3xl md:text-4xl text-green mb-3 reveal" data-reveal>Where I've applied it</h2>
-    <p class="text-muted max-w-2xl mb-12 reveal" data-reveal>Internships and organizational responsibilities — click any entry to expand.</p>
+    <p class="text-muted max-w-2xl mb-12 reveal" data-reveal>Internships, lab roles, and organizational responsibilities — click any entry to expand.</p>
 
     <div class="relative pl-8 md:pl-10" id="expTimeline">
       <div class="absolute left-[7px] md:left-[9px] top-2 bottom-2 w-[2px] rail-line"></div>
@@ -335,7 +331,7 @@
   <div class="max-w-7xl mx-auto px-5 md:px-8">
     <p class="font-mono text-xs uppercase tracking-widest text-orange mb-3 reveal" data-reveal>04 / Featured Projects</p>
     <h2 class="font-display font-bold text-3xl md:text-4xl text-green mb-3 reveal" data-reveal>Notable projects</h2>
-    <p class="text-muted max-w-2xl mb-12 reveal" data-reveal>Information system mockups designed to digitalize manufacturing and production control workflows.</p>
+    <p class="text-muted max-w-2xl mb-12 reveal" data-reveal>Information-system mockups designed to digitalize manufacturing and production-control workflows.</p>
 
     <div id="projectsGrid" class="grid md:grid-cols-2 gap-6"></div>
   </div>
@@ -346,7 +342,7 @@
   <div class="max-w-7xl mx-auto px-5 md:px-8">
     <p class="font-mono text-xs uppercase tracking-widest text-orange mb-3 reveal" data-reveal>05 / Skills</p>
     <h2 class="font-display font-bold text-3xl md:text-4xl text-green mb-3 reveal" data-reveal>Toolkit &amp; capabilities</h2>
-    <p class="text-muted max-w-2xl mb-12 reveal" data-reveal>Grouped by how each is applied, from planning &amp; control to statistical analysis.</p>
+    <p class="text-muted max-w-2xl mb-12 reveal" data-reveal>Grouped by how each is applied — from planning &amp; control to statistical analysis.</p>
 
     <div id="skillsGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
   </div>
@@ -356,7 +352,7 @@
 <section id="certifications" class="py-24 md:py-28">
   <div class="max-w-7xl mx-auto px-5 md:px-8">
     <p class="font-mono text-xs uppercase tracking-widest text-orange mb-3 reveal" data-reveal>06 / Certifications</p>
-    <h2 class="font-display font-bold text-3xl md:text-4xl text-green mb-3 reveal" data-reveal>Licenses &amp; training</h2>
+    <h2 class="font-display font-bold text-3xl md:text-4xl text-green mb-3 reveal" data-reveal>Licenses, training &amp; recognition</h2>
     <p class="text-muted max-w-2xl mb-8 reveal" data-reveal>All issued by Universitas Gunadarma, DQLab × UMN Xeratic, or partner organizations. Click any card to preview.</p>
 
     <div id="certFilters" class="flex flex-wrap gap-2 mb-8"></div>
@@ -404,7 +400,7 @@
         </span>
       </a>
 
-     <a href="https://www.linkedin.com/in/putu-arjun" target="_blank" rel="noopener" class="flex items-center gap-3 bg-white/60 border border-line rounded-2xl px-6 py-4 hover:border-orange transition-colors">
+      <a href="https://www.linkedin.com/in/putu-arjun" target="_blank" rel="noopener" class="flex items-center gap-3 bg-white/60 border border-line rounded-2xl px-6 py-4 hover:border-orange transition-colors">
         <span class="w-9 h-9 rounded-full bg-green text-cream flex items-center justify-center text-sm">in</span>
         <span>
           <span class="block text-xs text-muted font-mono uppercase">LinkedIn</span>
@@ -428,7 +424,7 @@
   <div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted">
     <div class="text-center md:text-left">
       <p class="font-display font-bold text-green">Ida I Dewa Putu Arjun Sastraguna</p>
-      <p>Industrial Engineering Graduate — Production Planning Control &amp; Logistics</p>
+      <p>Industrial Engineering Graduate — Production Planning, Control &amp; Logistics</p>
     </div>
     <div class="flex items-center gap-5 font-mono text-xs uppercase">
       <a href="mailto:putuarjun27@gmail.com" class="hover:text-orange">Email</a>
@@ -452,9 +448,9 @@ const experience = [
     title: "Head of Spiritual and Social Division",
     org: "Unit Kegiatan Mahasiswa (UKM) Hindu Gunadarma",
     tag: "Organization",
-    detail: "Led the spiritual and social programming division within Gunadarma's Hindu student community organization, coordinating activities and representing the division within the broader student body."
+    detail: "Led the spiritual and social programming division within Gunadarma's Hindu student community organization, coordinating activities and representing the division within the broader student body.",
     images: [
-      { src: "assets/ukmhg.JPG", caption: "UKMHG (Unit Kegiatan Mahasiswa Hindu Gunadarma)" },
+      { src: "assets/ukmhg.jpg", caption: "UKMHG (Unit Kegiatan Mahasiswa Hindu Gunadarma)" }
     ]
   },
   {
@@ -462,9 +458,9 @@ const experience = [
     title: "Laboratory Assistant &amp; Public Relations Division",
     org: "Elementary Laboratory of Industrial Engineering, Universitas Gunadarma",
     tag: "Organization",
-    detail: "Supports practicum sessions as a laboratory assistant while handling public-relations responsibilities for the Elementary Laboratory of Industrial Engineering."
+    detail: "Supports practicum sessions as a laboratory assistant while handling public-relations responsibilities for the Elementary Laboratory of Industrial Engineering.",
     images: [
-      { src: "assets/elite.HEIC", caption: "ELITE (Elementary Laboratory of Industrial Engineering" },
+      { src: "assets/elite.jpg", caption: "ELITE (Elementary Laboratory of Industrial Engineering)" }
     ]
   },
   {
@@ -472,9 +468,9 @@ const experience = [
     title: "Production Planning Inventory Control Internship",
     org: "PT Takagi Sari Multi Utama",
     tag: "Internship",
-    detail: "Internship placement within the Production Planning Inventory Control function of an automotive manufacturing company, gaining direct exposure to production scheduling, FIFO system, and stock opname."
+    detail: "Internship placement within the Production Planning Inventory Control function of an automotive manufacturing company, gaining direct exposure to production scheduling, the FIFO system, and stock opname.",
     images: [
-      { src: "assets/takagi_intern.jpeg", caption: "PPIC Takagi" },
+      { src: "assets/takagi_intern.jpg", caption: "PPIC Takagi" }
     ]
   },
   {
@@ -482,9 +478,9 @@ const experience = [
     title: "Production Planning Control Internship",
     org: "PT Astra Daihatsu Motor",
     tag: "Internship",
-    detail: "Internship placement within the Production Planning Control function of an automotive manufacturing company, gaining direct exposure to production scheduling and control practices on the shop floor."
+    detail: "Internship placement within the Production Planning Control function of an automotive manufacturing company, gaining direct exposure to production scheduling and control practices on the shop floor.",
     images: [
-      { src: "assets/adm_intern.jpeg", caption: "ADM Internship" },
+      { src: "assets/adm_intern.jpg", caption: "ADM Internship" }
     ]
   },
   {
@@ -499,10 +495,10 @@ const experience = [
     title: "Production Control Logistic Internship",
     org: "PT Sugity Creatives",
     tag: "Internship",
-    detail: "Internship in Production Control &amp; Logistics, focused on the coordination between production execution and material/logistics flow within a manufacturing environment."
+    detail: "Internship in Production Control &amp; Logistics, focused on the coordination between production execution and material/logistics flow within a manufacturing environment.",
     images: [
-      { src: "assets/sugity_intern.jpeg", caption: "Sugity Internship" },
-      { src: "assets/sugity_intern_report.jpeg", caption: "Final Report Internship" }
+      { src: "assets/sugity_intern.jpg", caption: "Sugity Internship" },
+      { src: "assets/sugity_intern_report.jpg", caption: "Final Report Internship" }
     ]
   }
 ];
@@ -516,11 +512,11 @@ const projects = [
     solution: "Designed a mockup that automates stock updates, material tracking, inventory transactions, and reporting — consolidating stock in/out transactions, real time inventory monitoring, reporting, and dashboard analytics into one centralized system.",
     role: "Designed and developed the system mockup independently.",
     result: "Streamlined inventory control, faster decision making, and improved warehouse management performance, while reducing manual processing and improving inventory accuracy.",
-    skills: ["Inventory Management", "Information System Design", "Dashboard Analytics", "Process Mapping"]
+    skills: ["Inventory Management", "Information System Design", "Dashboard Analytics", "Process Mapping"],
     images: [
-      { src: "assets/proj_com_dashboard.png", caption: "Dashboard Inventory Management System" },
-      { src: "assets/proj_com_system_dashboard.png", caption: "System Dashboard Inventory Management System" },
-      { src: "assets/proj_com_transaction_report.png", caption: "Transaction Report" }
+      { src: "assets/proj_com_dashboard.jpg", caption: "Dashboard — Inventory Management System" },
+      { src: "assets/proj_com_system_dashboard.jpg", caption: "System Dashboard — Inventory Management System" },
+      { src: "assets/proj_com_transaction_report.jpg", caption: "Transaction Report" }
     ]
   },
   {
@@ -531,7 +527,7 @@ const projects = [
     solution: "Designed a system that automates customer order submission, order validation, production planning, inventory synchronization, and production instruction generation (E-Label) — integrating customer orders, forecast planning, production planning, inventory management, and E-Label generation into one centralized dashboard.",
     role: "Designed and developed the system mockup independently.",
     result: "Enabled real-time order monitoring, improved data accuracy, and more efficient decision making throughout the production planning process.",
-    skills: ["Production Planning", "Order Management", "Process Digitalization", "Dashboard Design"]
+    skills: ["Production Planning", "Order Management", "Process Digitalization", "Dashboard Design"],
     images: [
       { src: "assets/proj_com_login.jpg", caption: "Login — SIS-ON (Sugity Integration System Online)" },
       { src: "assets/proj_com_manual_po.jpg", caption: "Manual Customer Order entry" },
@@ -567,7 +563,7 @@ const bring = [
   },
   {
     title: "Process &amp; Systems Thinking",
-    body: "Structured training across the full production system lifecycle — product design, process planning, production system design, and evaluation."
+    body: "Structured training across the full production-system lifecycle — product design, process planning, production system design, and evaluation."
   },
   {
     title: "Data-Driven Decision Making",
@@ -575,11 +571,11 @@ const bring = [
   },
   {
     title: "Digital Process &amp; Information Systems",
-    body: "Designed information system mockups that translate manual manufacturing workflows into dashboard driven digital processes."
+    body: "Designed information-system mockups that translate manual manufacturing workflows into dashboard-driven digital processes."
   },
   {
     title: "Cross-Functional Coordination",
-    body: "Experience spanning lab assistance, public relations, practicum leadership, and student organization division leadership."
+    body: "Experience spanning lab assistance, public relations, practicum leadership, and student-organization division leadership."
   }
 ];
 
@@ -593,9 +589,9 @@ const certifications = [
   { title:"Creating Simulation Using Promodel Software", issuer:"Universitas Gunadarma", date:"07 Mar 2024", credential:"", category:"Training", img:"assets/cert_promodel.jpg" },
   { title:"International Seminar: Eye-Tracking &amp; VR for Work, Learning, and Leisure", issuer:"Universitas Gunadarma × Université Bourgogne Europe", date:"09 Sep 2025", credential:"", category:"Seminar", img:"assets/cert_seminar_vr.jpg" },
   { title:"Seminar Ilmiah 2025 — Transisi Hijau Industri Otomotif Indonesia", issuer:"Universitas Gunadarma", date:"31 Jul 2025", credential:"", category:"Seminar", img:"assets/cert_seminar_hijau.jpg" },
-  { title:"Otsuka Factory Visit — Certificate of Appreciation", issuer:"Otsuka · HMTI Universitas Gunadarma", date:"30 May 2024", credential:"", category:"Apreciation", img:"assets/cert_otsuka.jpg" },
+  { title:"Otsuka Factory Visit — Certificate of Appreciation", issuer:"Otsuka · HMTI Universitas Gunadarma", date:"30 May 2024", credential:"", category:"Appreciation", img:"assets/cert_otsuka.jpg" },
   { title:"Certificate of Internship", issuer:"PT Sugity Creatives", date:"25 May – 31 Aug 2026", credential:"No. 0987.400/SC/HC/VIII/2026", category:"Internship", img:"assets/cert_sugity_internship.jpg" },
-  { title:"Pragatisarga Sampanna — Sertifikat Penghargaan, Koordinator Kerohanian, Sosial, dan Masyarakat", issuer:"UKM Hindu Gunadarma", date:"", credential:"", category:"Apreciation", img:"assets/cert_ukm_hindu_award.jpg" },
+  { title:"Pragatisarga Sampanna — Sertifikat Penghargaan, Koordinator Kerohanian, Sosial, dan Masyarakat", issuer:"UKM Hindu Gunadarma", date:"", credential:"", category:"Appreciation", img:"assets/cert_ukm_hindu_award.jpg" },
   { title:"R Fundamental for Data Science", issuer:"DQLab × UMN Xeratic", date:"08 Oct 2022", credential:"#DQLABINTR1MMDOEQ", category:"Data Science", img:"assets/dqlab_r_fundamental.jpg" },
   { title:"Introduction to Data Science with R", issuer:"DQLab × UMN Xeratic", date:"08 Oct 2022", credential:"#DQLABBGINRHHFPUL", category:"Data Science", img:"assets/dqlab_intro_r.jpg" },
   { title:"Memanfaatkan Operator Logika di SQL", issuer:"DQLab × UMN Xeratic", date:"27 Dec 2022", credential:"#DQLABMDTDSBRSODI", category:"Data Science", img:"assets/dqlab_sql_logika.jpg" },
@@ -630,9 +626,18 @@ experience.forEach((item, i) => {
           <span class="exp-chevron shrink-0 font-mono text-green text-lg transition-transform">+</span>
         </div>
         <div class="exp-detail hidden mt-4 pt-4 border-t border-line text-sm md:text-base text-ink/80 leading-relaxed">
-          ${item.detail}
+          <p>${item.detail}</p>
         </div>
       </button>
+      ${item.images && item.images.length ? `
+        <div class="exp-gallery hidden mt-3 grid grid-cols-2 sm:grid-cols-3 gap-2" data-gallery-for="${i}">
+          ${item.images.map(img => `
+            <button class="img-open text-left rounded-lg overflow-hidden border border-line bg-creamsoft group" data-src="${img.src}" data-caption="${img.caption}">
+              <img src="${img.src}" alt="${img.caption}" class="w-full aspect-video object-cover group-hover:scale-[1.03] transition-transform" loading="lazy">
+            </button>
+          `).join('')}
+        </div>
+      ` : ''}
     </div>
   `);
   expTimeline.appendChild(node);
@@ -645,22 +650,31 @@ expTimeline.addEventListener('click', (e) => {
   const open = !detail.classList.contains('hidden');
   detail.classList.toggle('hidden');
   chevron.textContent = open ? '+' : '–';
+  const gallery = expTimeline.querySelector(`[data-gallery-for="${btn.dataset.i}"]`);
+  if(gallery) gallery.classList.toggle('hidden');
 });
 
 // Projects
 const projectsGrid = document.getElementById('projectsGrid');
 projects.forEach((p, i) => {
   const card = el(`
-    <div class="bg-white/60 border border-line rounded-2xl p-6 md:p-7 lift flex flex-col reveal" data-reveal>
-      <p class="font-mono text-[11px] uppercase tracking-wide text-orange mb-2">${p.category}</p>
-      <h3 class="font-display font-bold text-xl md:text-2xl text-green">${p.title}</h3>
-      <p class="text-muted mt-3 text-sm md:text-base leading-relaxed flex-1">${p.summary}</p>
-      <div class="mt-5 flex flex-wrap gap-2">
-        ${p.skills.slice(0,3).map(s=>`<span class="chip text-xs px-3 py-1 rounded-full bg-creamsoft text-green">${s}</span>`).join('')}
+    <div class="bg-white/60 border border-line rounded-2xl overflow-hidden lift flex flex-col reveal" data-reveal>
+      ${p.images && p.images.length ? `
+        <div class="aspect-video overflow-hidden bg-creamsoft">
+          <img src="${p.images[0].src}" alt="${p.title} preview" class="w-full h-full object-cover" loading="lazy">
+        </div>
+      ` : ''}
+      <div class="p-6 md:p-7 flex flex-col flex-1">
+        <p class="font-mono text-[11px] uppercase tracking-wide text-orange mb-2">${p.category}</p>
+        <h3 class="font-display font-bold text-xl md:text-2xl text-green">${p.title}</h3>
+        <p class="text-muted mt-3 text-sm md:text-base leading-relaxed flex-1">${p.summary}</p>
+        <div class="mt-5 flex flex-wrap gap-2">
+          ${p.skills.slice(0,3).map(s=>`<span class="chip text-xs px-3 py-1 rounded-full bg-creamsoft text-green">${s}</span>`).join('')}
+        </div>
+        <button class="proj-open mt-6 self-start inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wide text-green hover:text-orange transition-colors" data-i="${i}">
+          View Case Study →
+        </button>
       </div>
-      <button class="proj-open mt-6 self-start inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wide text-green hover:text-orange transition-colors" data-i="${i}">
-        View Case Study →
-      </button>
     </div>
   `);
   projectsGrid.appendChild(card);
@@ -673,6 +687,17 @@ projectsGrid.addEventListener('click', (e) => {
     <div class="p-6 md:p-8">
       <p class="font-mono text-[11px] uppercase tracking-wide text-orange mb-2">${p.category}</p>
       <h3 class="font-display font-bold text-2xl md:text-3xl text-green mb-6">${p.title}</h3>
+
+      ${p.images && p.images.length ? `
+        <div class="grid sm:grid-cols-2 gap-3 mb-8">
+          ${p.images.map(img => `
+            <button class="img-open text-left rounded-xl overflow-hidden border border-line bg-creamsoft group" data-src="${img.src}" data-caption="${img.caption}">
+              <img src="${img.src}" alt="${img.caption}" class="w-full aspect-video object-cover group-hover:scale-[1.03] transition-transform" loading="lazy">
+              <p class="text-xs text-muted px-3 py-2">${img.caption}</p>
+            </button>
+          `).join('')}
+        </div>
+      ` : ''}
 
       <div class="space-y-5 text-sm md:text-base leading-relaxed">
         <div>
@@ -745,7 +770,7 @@ function renderCerts(){
         <div class="p-4">
           <span class="font-mono text-[10px] uppercase tracking-wide text-orange">${c.category}</span>
           <h4 class="font-display font-semibold text-green text-sm mt-1 leading-snug">${c.title}</h4>
-          <p class="text-xs text-muted mt-1">${c.issuer} · ${c.date}</p>
+          <p class="text-xs text-muted mt-1">${c.issuer}${c.date ? ' · ' + c.date : ''}</p>
         </div>
       </button>
     `);
@@ -777,7 +802,7 @@ certGrid.addEventListener('click', (e) => {
         <span class="font-mono text-[11px] uppercase tracking-wide text-orange">${c.category}</span>
         <h3 class="font-display font-bold text-xl text-green mt-1">${c.title}</h3>
         <p class="text-muted text-sm mt-2">${c.issuer}</p>
-        <p class="text-muted text-sm">${c.date}</p>
+        ${c.date ? `<p class="text-muted text-sm">${c.date}</p>` : ''}
         ${c.credential ? `<p class="font-mono text-xs text-ink/60 mt-3">${c.credential}</p>` : ''}
       </div>
     </div>
@@ -803,6 +828,16 @@ function closeModal(){
 }
 modalRoot.addEventListener('click', (e) => {
   if(e.target === modalRoot || e.target.id === 'modalClose') closeModal();
+});
+document.addEventListener('click', (e) => {
+  const imgBtn = e.target.closest('.img-open');
+  if(!imgBtn) return;
+  openModal(`
+    <div>
+      <img src="${imgBtn.dataset.src}" alt="${imgBtn.dataset.caption}" class="w-full max-h-[75vh] object-contain bg-creamsoft">
+      <p class="text-center text-sm text-muted p-4">${imgBtn.dataset.caption}</p>
+    </div>
+  `);
 });
 document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
 
